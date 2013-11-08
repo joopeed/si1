@@ -15,24 +15,32 @@ public class NumeroPorExtensoTest {
 
 	@Test
 	public void testComportamento1() {
-		assertEquals(NumeroPorExtenso.converte(0), "Zero");
-		assertEquals(NumeroPorExtenso.converte(1), "Um");
-		assertEquals(NumeroPorExtenso.converte(2), "Dois");
-		assertEquals(NumeroPorExtenso.converte(7), "Sete");
-		assertEquals(NumeroPorExtenso.converte(9), "Nove");
-		assertEquals(NumeroPorExtenso.converte(10), "Dez");
+		assertEquals("zero", NumeroPorExtenso.converte(0));
+		assertEquals("um", NumeroPorExtenso.converte(1));
+		assertEquals("dois",NumeroPorExtenso.converte(2));
+		assertEquals("sete", NumeroPorExtenso.converte(7));
+		assertEquals("nove", NumeroPorExtenso.converte(9));
+		assertEquals("dez", NumeroPorExtenso.converte(10));
 	}
 	
 	@Test
 	public void testComportamento2() {
-		assertEquals(NumeroPorExtenso.converte(20), "Vinte");
-		assertEquals(NumeroPorExtenso.converte(11), "Onze");
-		assertEquals(NumeroPorExtenso.converte(17), "Dezessete");
-		assertEquals(NumeroPorExtenso.converte(18), "Dezoito");
-		assertEquals(NumeroPorExtenso.converte(19), "Dezenove");
-		assertEquals(NumeroPorExtenso.converte(13), "Treze");
+		assertEquals("vinte", NumeroPorExtenso.converte(20));
+		assertEquals("onze", NumeroPorExtenso.converte(11));
+		assertEquals("dezessete", NumeroPorExtenso.converte(17));
+		assertEquals("dezoito", NumeroPorExtenso.converte(18));
+		assertEquals("dezenove", NumeroPorExtenso.converte(19));
+		assertEquals("treze", NumeroPorExtenso.converte(13));
 	}
 	
-	
+	@Test
+	public void testComportamento3() {
+		assertEquals("vinte e três", NumeroPorExtenso.converte(23));
+		assertEquals("quarenta e um", NumeroPorExtenso.converte(41));
+		assertEquals("setenta e sete", NumeroPorExtenso.converte(77));
+		assertEquals("cinquenta e oito", NumeroPorExtenso.converte(58));
+		assertEquals("noventa e nove", NumeroPorExtenso.converte(99));
+		assertEquals("sessenta e três",NumeroPorExtenso.converte(63));
+	}
 
 }
