@@ -22,5 +22,17 @@ public class NumeroPorExtensoTest {
 		assertEquals(NumeroPorExtenso.converte(9), "Nove");
 		assertEquals(NumeroPorExtenso.converte(10), "Dez");
 	}
+	
+	@Test
+	public void testComportamento2() {
+		assertEquals(NumeroPorExtenso.converte(20), "Vinte");
+		assertEquals(NumeroPorExtenso.converte(11), "Onze");
+		assertEquals(NumeroPorExtenso.converte(17), "Dezessete");
+		assertEquals(NumeroPorExtenso.converte(18), "Dezoito");
+		assertEquals(NumeroPorExtenso.converte(19), "Dezenove");
+		assertEquals(NumeroPorExtenso.converte(13), "Treze");
+	}
+	
+	
 
 }
