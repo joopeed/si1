@@ -16,9 +16,11 @@ public class ConversorDeNumeros {
                         System.out.println(resultado);
                         break;
                 } catch (Exception e) {
-                        if(e.getMessage().equals("Negativos nao suportados")) System.out.println("Digite um numero positivo");
-                        else if(e.getMessage().equals("Numero muito grande")) System.out.println("Digite um numero menor que 1 bilhão");
-                        else if(e instanceof NumberFormatException) System.out.println("Numero invalido. Digite novamente"); 
+                		if (!entrada.equals("")) {
+                			if(e.getMessage().equals("Negativos nao suportados")) System.out.println("Digite um numero positivo");
+                			else if(e.getMessage().equals("Numero muito grande")) System.out.println("Digite um numero menor que 1 bilhão");
+                			else if(e instanceof NumberFormatException) System.out.println("Numero invalido. Digite novamente"); 
+                		}
                 } 
         }
         
