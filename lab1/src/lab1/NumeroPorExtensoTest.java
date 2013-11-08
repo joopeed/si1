@@ -14,7 +14,7 @@ public class NumeroPorExtensoTest {
 	}
 
 	@Test
-	public void testComportamento1() {
+	public void testComportamento1() throws Exception {
 		assertEquals("zero", NumeroPorExtenso.converte(0));
 		assertEquals("um", NumeroPorExtenso.converte(1));
 		assertEquals("dois",NumeroPorExtenso.converte(2));
@@ -24,7 +24,7 @@ public class NumeroPorExtensoTest {
 	}
 	
 	@Test
-	public void testComportamento2() {
+	public void testComportamento2() throws Exception {
 		assertEquals("vinte", NumeroPorExtenso.converte(20));
 		assertEquals("onze", NumeroPorExtenso.converte(11));
 		assertEquals("dezessete", NumeroPorExtenso.converte(17));
@@ -34,7 +34,7 @@ public class NumeroPorExtensoTest {
 	}
 	
 	@Test
-	public void testComportamento3() {
+	public void testComportamento3() throws Exception {
 		assertEquals("vinte e três", NumeroPorExtenso.converte(23));
 		assertEquals("quarenta e um", NumeroPorExtenso.converte(41));
 		assertEquals("setenta e sete", NumeroPorExtenso.converte(77));
@@ -44,7 +44,7 @@ public class NumeroPorExtensoTest {
 	}
 	
 	@Test
-	public void testComportamento4() {
+	public void testComportamento4() throws Exception {
 		assertEquals("cento e três", NumeroPorExtenso.converte(103));
 		assertEquals("duzentos e três", NumeroPorExtenso.converte(203));
 		assertEquals("duzentos e trinta e três", NumeroPorExtenso.converte(233));
@@ -55,7 +55,7 @@ public class NumeroPorExtensoTest {
 		assertEquals("seiscentos e trinta e oito",NumeroPorExtenso.converte(638));
 	}
 	@Test
-	public void testComportamento5() {
+	public void testComportamento5() throws Exception {
 		assertEquals("um mil e um", NumeroPorExtenso.converte(1001));
 		assertEquals("um mil e cem", NumeroPorExtenso.converte(1100));
 		assertEquals("dois mil duzentos e setenta e oito", NumeroPorExtenso.converte(2278));
@@ -63,6 +63,17 @@ public class NumeroPorExtensoTest {
 		assertEquals("quatro mil quinhentos e vinte e oito", NumeroPorExtenso.converte(4528));
 		assertEquals("quatro mil novecentos e sessenta e nove", NumeroPorExtenso.converte(4969));
 		assertEquals("quatro mil seiscentos e trinta e oito",NumeroPorExtenso.converte(4638));
+	}
+	@Test
+	public void testComportamento6() throws Exception {
+		assertEquals("cem mil", NumeroPorExtenso.converte(100000));
+		assertEquals("cem mil e um", NumeroPorExtenso.converte(100001));
+		assertEquals("duzentos mil quatrocentos e um", NumeroPorExtenso.converte(200401));
+		assertEquals("novecentos e quarenta mil quatrocentos e um", NumeroPorExtenso.converte(940401));
+		assertEquals("novecentos e quarenta e quatro mil quatrocentos e um", NumeroPorExtenso.converte(944401));
+		assertEquals("um milhão novecentos e quarenta e quatro mil quatrocentos e um", NumeroPorExtenso.converte(1944401));
+		assertEquals("quatrocentos e vinte milhões novecentos e quarenta e quatro mil quatrocentos e um", NumeroPorExtenso.converte(420944401));
+		assertEquals("novecentos e noventa e nove milhões novecentos e noventa e nove mil novecentos e noventa e nove", NumeroPorExtenso.converte(999999999));
 	}
 
 }
