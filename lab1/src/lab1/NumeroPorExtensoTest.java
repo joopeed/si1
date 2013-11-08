@@ -45,12 +45,24 @@ public class NumeroPorExtensoTest {
 	
 	@Test
 	public void testComportamento4() {
+		assertEquals("cento e três", NumeroPorExtenso.converte(103));
+		assertEquals("duzentos e três", NumeroPorExtenso.converte(203));
 		assertEquals("duzentos e trinta e três", NumeroPorExtenso.converte(233));
 		assertEquals("quatrocentos e cinquenta e um", NumeroPorExtenso.converte(451));
 		assertEquals("setecentos e sessenta e sete", NumeroPorExtenso.converte(767));
 		assertEquals("quinhentos e vinte e oito", NumeroPorExtenso.converte(528));
 		assertEquals("novecentos e sessenta e nove", NumeroPorExtenso.converte(969));
 		assertEquals("seiscentos e trinta e oito",NumeroPorExtenso.converte(638));
+	}
+	@Test
+	public void testComportamento5() {
+		assertEquals("um mil e um", NumeroPorExtenso.converte(1001));
+		assertEquals("um mil e cem", NumeroPorExtenso.converte(1100));
+		assertEquals("dois mil duzentos e setenta e oito", NumeroPorExtenso.converte(2278));
+		assertEquals("quatro mil setecentos e sessenta e sete", NumeroPorExtenso.converte(4767));
+		assertEquals("quatro mil quinhentos e vinte e oito", NumeroPorExtenso.converte(4528));
+		assertEquals("quatro mil novecentos e sessenta e nove", NumeroPorExtenso.converte(4969));
+		assertEquals("quatro mil seiscentos e trinta e oito",NumeroPorExtenso.converte(4638));
 	}
 
 }
