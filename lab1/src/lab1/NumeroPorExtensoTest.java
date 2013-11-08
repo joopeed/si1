@@ -42,5 +42,15 @@ public class NumeroPorExtensoTest {
 		assertEquals("noventa e nove", NumeroPorExtenso.converte(99));
 		assertEquals("sessenta e três",NumeroPorExtenso.converte(63));
 	}
+	
+	@Test
+	public void testComportamento4() {
+		assertEquals("duzentos e trinta e três", NumeroPorExtenso.converte(233));
+		assertEquals("quatrocentos e cinquenta e um", NumeroPorExtenso.converte(451));
+		assertEquals("setecentos e sessenta e sete", NumeroPorExtenso.converte(767));
+		assertEquals("quinhentos e vinte e oito", NumeroPorExtenso.converte(528));
+		assertEquals("novecentos e sessenta e nove", NumeroPorExtenso.converte(969));
+		assertEquals("seiscentos e trinta e oito",NumeroPorExtenso.converte(638));
+	}
 
 }
