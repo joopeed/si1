@@ -38,4 +38,8 @@ public class Application extends Controller {
 		  return redirect(routes.Application.tasks());	
 	  }
 
+	  public static Result markTaskAsDone(Long id) {
+		  Task.markAsDone(id);
+		  return redirect(routes.Application.tasks());	
+	  }
 }
