@@ -1,0 +1,27 @@
+table {background-color: grey}
+pre{
+	background-color: silver;
+}
+tr:nth-child(odd) {
+        background-color: grey;
+}
+
+tr:nth-child(even) {
+        background-color: silver;
+}
+.adicionar {
+	background-color: graytext;
+	position: fixed;
+	width: 27%;
+	left:0px;
+	top:0px;
+	padding: 2%;
+	height: 100%;
+	
+}
+.listar {
+	position: absolute;
+	right:27%;
+	padding: 2%;
+	
+}
