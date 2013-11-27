@@ -7,17 +7,18 @@
     	<h1>Há @Task.allUndone().size() tarefas(s) não feitas</h1>
     
     <table>
-    	@if(Task.allUndone().size() != 0) {<tr><td>Título</td><td>Projeto associado</td><td>Prioridade</td></tr>}
+    	@if(Task.allUndone().size() != 0) {<tr><td>Título</td><td>Descrição</td><td>Projeto associado</td><td>Prioridade</td></tr>}
         @for(task <- Task.allUndone()) {
             <tr>
-               <td> @task.label </td> 
-               <td> @task.project </td> 
-               <td> @task.priority </td>
+               <td> @task.getLabel() </td> 
+               <td> @task.getDescription() </td> 
+               <td> @task.getProject() </td> 
+               <td> @task.getPriority() </td>
                <td> 
-                @form(routes.Application.deleteTask(task.id)) {
+                @form(routes.Application.deleteTask(task.getId())) {
                     <input type="submit" value="Apagar">
                 }</td><td>
-                @form(routes.Application.markTaskAsDone(task.id)) {
+                @form(routes.Application.markTaskAsDone(task.getId())) {
                     <input type="submit" value="Já fiz">
                 } </td>
             </tr>
@@ -27,14 +28,15 @@
     <h1>E @Task.allDone().size() tarefas(s) já feitas</h1>
     
     <table>
-    	@if(Task.allDone().size() != 0) {<tr><td>Título</td><td>Projeto associado</td><td>Prioridade</td></tr>}
+    	@if(Task.allDone().size() != 0) {<tr><td>Título</td><td>Descrição</td><td>Projeto associado</td><td>Prioridade</td></tr>}
         @for(task <- Task.allDone()) {
             <tr>
-               <td> @task.label </td> 
-               <td> @task.project </td> 
-               <td> @task.priority </td>
+               <td> @task.getLabel() </td> 
+               <td> @task.getDescription() </td> 
+               <td> @task.getProject() </td> 
+               <td> @task.getPriority() </td>
                <td> 
-                @form(routes.Application.deleteTask(task.id)) {
+                @form(routes.Application.deleteTask(task.getId())) {
                     <input type="submit" value="Apagar">
                 }</td>
             </tr>
@@ -45,6 +47,7 @@
     <h2>Adicionar uma nova tarefa</h2>
     @form(routes.Application.newTask()) {
     	@inputText(taskForm("label"), '_label -> "Titulo da tarefa") 
+    	@inputText(taskForm("description"), '_label -> "Descrição da tarefa")
         @inputText(taskForm("priority"), '_label -> "Prioridade da tarefa")
         @inputText(taskForm("project"), '_label -> "Projeto associado da tarefa")  
         <input type="submit" value="Adicionar">
